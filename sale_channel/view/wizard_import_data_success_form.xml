@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form string="Import Orders" col="2">
+    <label string="Data has been imported successfully" id="success" colspan="2" yalign="0.0" xalign="0.0" xexpand="1"/>
+    <label name="no_of_orders"/>
+    <field name="no_of_orders"/>
+    <label name="no_of_products"/>
+    <field name="no_of_products"/>
+</form>

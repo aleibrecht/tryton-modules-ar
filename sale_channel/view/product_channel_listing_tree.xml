@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree string="Product Channel Listings">
+    <field name="product" />
+    <field name="channel" />
+    <field name="product_identifier" />
+</tree>

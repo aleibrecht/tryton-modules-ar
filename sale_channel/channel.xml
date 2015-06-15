@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="sale_channel_view_tree">
+            <field name="model">sale.channel</field>
+            <field name="type">tree</field>
+            <field name="name">sale_channel_tree</field>
+        </record>
+        <record model="ir.ui.view" id="sale_channel_view_form">
+            <field name="model">sale.channel</field>
+            <field name="type">form</field>
+            <field name="name">sale_channel_form</field>
+        </record>
+
+        <!--Channel Exception-->
+        <record model="ir.ui.view" id="channel_exception_form_view">
+            <field name="model">channel.exception</field>
+            <field name="type">form</field>
+            <field name="name">channel_exception_form</field>
+        </record>
+        <record model="ir.ui.view" id="channel_exception_tree_view">
+            <field name="model">channel.exception</field>
+            <field name="type">tree</field>
+            <field name="name">channel_exception_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_sale_channel_form">
+            <field name="name">Channels</field>
+            <field name="res_model">sale.channel</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_channel_form_view_1">
+            <field name="sequence" eval="10" />
+            <field name="view" ref="sale_channel_view_tree" />
+            <field name="act_window" ref="act_sale_channel_form" />
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_channel_form_view_2">
+            <field name="sequence" eval="10" />
+            <field name="view" ref="sale_channel_view_form" />
+            <field name="act_window" ref="act_sale_channel_form" />
+        </record>
+        <menuitem parent="sale.menu_configuration" action="act_sale_channel_form"
+          id="menu_sale_channel" icon="tryton-list" />
+
+        <record model="ir.action.act_window" id="act_listed_product">
+            <field name="name">Listed Products</field>
+            <field name="res_model">product.product</field>
+            <field name="domain">[('channel_listings.channel', 'in', Eval('active_ids'))]</field>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_sale_channel_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">sale.channel,-1</field>
+            <field name="action" ref="act_listed_product"/>
+        </record>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_sale_channel">
+            <field name="model" search="[('model', '=', 'sale.channel')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_sale_channel_admin">
+            <field name="model" search="[('model', '=', 'sale.channel')]"/>
+            <field name="group" ref="sale.group_sale_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <!-- Sales view -->
+        <record model="ir.action.act_window" id="act_sale_form_all">
+            <field name="name">Sales</field>
+            <field name="res_model">sale.sale</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sale.sale_view_tree"/>
+            <field name="act_window" ref="act_sale_form_all"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sale.sale_view_form"/>
+            <field name="act_window" ref="act_sale_form_all"/>
+        </record>
+
+        <!--Order states-->
+        <record model="ir.ui.view" id="order_states_view_form">
+            <field name="model">sale.channel.order_state</field>
+            <field name="type">form</field>
+            <field name="name">order_states_form</field>
+        </record>
+        <record model="ir.ui.view" id="order_states_view_tree">
+          <field name="model">sale.channel.order_state</field>
+            <field name="type">tree</field>
+            <field name="name">order_states_tree</field>
+        </record>
+
+        <!--Cron To Import Orders-->
+        <record model="ir.cron" id="cron_import_orders">
+            <field name="name">Import Orders</field>
+            <field name="request_user" ref="res.user_admin"/>
+            <field name="user" ref="res.user_trigger"/>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="number_calls">-1</field>
+            <field name="repeat_missed" eval="False"/>
+            <field name="model">sale.channel</field>
+            <field name="function">import_orders_using_cron</field>
+        </record>
+
+        <!-- Cron To Export Product Prices-->
+        <record model="ir.cron" id="ir_cron_export_product_prices">
+            <field name="name">Export Product Prices</field>
+            <field name="request_user" ref="res.user_admin"/>
+            <field name="user" ref="res.user_trigger"/>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="number_calls">-1</field>
+            <field name="model">sale.channel</field>
+            <field name="function">export_product_prices_using_cron</field>
+        </record>
+    </data>
+</tryton>

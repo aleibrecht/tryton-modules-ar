@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<form string="Order States" col="4">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="action"/>
+    <field name="action"/>
+    <label name="invoice_method"/>
+    <field name="invoice_method"/>
+    <label name="shipment_method"/>
+    <field name="shipment_method"/>
+    <label name="channel"/>
+    <field name="channel"/>
+</form>

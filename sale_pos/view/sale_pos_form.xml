@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!-- This file is part sale_pos module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Pos Cash Sales" col="4">
+    <field name="lines" colspan="2"
+        view_ids="sale_pos.sale_line_view_tree,sale.sale_line_view_form"/>
+    <notebook colspan="2">
+        <page string="Sale" col="2" id="sale">
+            <label name="shop"/>
+            <field name="shop"/>
+            <label name="sale_device"/>
+            <field name="sale_device"/>
+            <label name="reference"/>
+            <field name="reference"/>
+            <label name="ticket_number"/>
+            <field name="ticket_number"/>
+            <separator colspan="2" id="party_info"/>
+            <label name="party"/>
+            <field name="party"/>
+            <label name="price_list"/>
+            <field name="price_list"/>
+            <label name="payment_term"/>
+            <field name="payment_term"/>
+            <label name="pos_create_date"/>
+            <field name="pos_create_date"/>
+            <label name="sale_date"/>
+            <field name="sale_date"/>
+            <separator colspan="2" id="amount_info"/>
+            <label name="untaxed_amount"/>
+            <field name="untaxed_amount"/>
+            <label name="tax_amount"/>
+            <field name="tax_amount"/>
+            <label name="total_amount"/>
+            <field name="total_amount"/>
+            <separator colspan="2" id="payment_info"/>
+            <label name="paid_amount"/>
+            <field name="paid_amount"/>
+            <label name="residual_amount"/>
+            <field name="residual_amount"/>
+            <separator colspan="2" id="shipment_info"/>
+            <label name="self_pick_up"/>
+            <field name="self_pick_up"/>
+            <label name="shipment_method"/>
+            <field name="shipment_method"/>
+            <label name="shipment_address"/>
+            <field name="shipment_address"/>
+            <label name="invoice_method"/>
+            <field name="invoice_method"/>
+            <label name="invoice_address"/>
+            <field name="invoice_address"/>
+            <field name="currency" invisible="1"/>
+        </page>
+        <page string="Payments" col="2" id="payments">
+            <field name="payments" colspan="2" readonly="1"/>
+            <label name="paid_amount"/>
+            <field name="paid_amount"/>
+            <label name="residual_amount"/>
+            <field name="residual_amount"/>
+        </page>
+        <page string="Invoices" col="2" id="invoices">
+            <field name="invoices" colspan="2"/>
+            <label name="invoice_state"/>
+            <field name="invoice_state"/>
+        </page>
+        <page string="Shipments" id="shipments" col="2">
+            <label name="warehouse"/>
+            <field name="warehouse"/>
+            <field name="moves" colspan="2"
+                view_ids="sale.move_view_list_shipment"/>
+            <field name="shipments" colspan="2"/>
+            <field name="shipment_returns" colspan="2"/>
+            <label name="shipment_state"/>
+            <field name="shipment_state"/>
+        </page>
+        <page string="Comment" id="comment" col="2">
+            <field name="comment"/>
+        </page>
+    </notebook>
+    <group id="cash" colspan="2">
+        <button name="wizard_add_product" string="_Add Products"
+            icon="tryton-list-add"/>
+        <button name="add_sum" string="Add _Sum"
+            icon="tryton-list-add"/>
+        <button name="wizard_sale_payment" string="_Pay"
+            icon="tryton-go-next"/>
+        <button name="print_ticket" string="_Ticket"
+            icon="tryton-print"/>
+    </group>
+    <label name="state"/>
+    <field name="state"/>
+    <group col="7" colspan="4" id="full_workflow_buttons"
+        states="{'invisible': Eval('self_pick_up', False)}">
+        <button name="cancel" string="Cancel" icon="tryton-cancel"/>
+        <button name="draft" string="Draft"/>
+        <button name="quote" string="Quote" icon="tryton-go-next"/>
+        <button name="handle_invoice_exception"
+            string="Handle Invoice Exception" icon="tryton-go-next"/>
+        <button name="handle_shipment_exception"
+            string="Handle Shipment Exception" icon="tryton-go-next"/>
+        <button name="confirm" string="Confirm" icon="tryton-go-next"/>
+        <button name="process" string="Process" icon="tryton-go-next"/>
+    </group>
+</form>

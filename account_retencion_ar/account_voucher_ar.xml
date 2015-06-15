@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- This file is part of the account_retencion_ar module for Tryton.
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="view_voucher_retencion_form">
+            <field name="model">account.voucher</field>
+            <field name="inherit" ref="account_voucher_ar.account_voucher_form"/>
+            <field name="type">form</field>
+            <field name="name">voucher_retencion_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="retenciones_efectuadas_view_tree">
+            <field name="model">account.retencion.efectuada</field>
+            <field name="type">tree</field>
+            <field name="name">retenciones_efectuadas_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="retenciones_soportadas_view_tree">
+            <field name="model">account.retencion.soportada</field>
+            <field name="type">tree</field>
+            <field name="name">retenciones_soportadas_tree</field>
+        </record>
+
+    </data>
+</tryton>

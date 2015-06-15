@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- This file is part of the account_bank_ar module for Tryton.
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<form string="Bank" col="6">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="active"/>
+    <field name="active" xexpand="0" width="100"/>
+    <newline/>
+    <separator string="Address" colspan="3" id="address"/>
+    <separator string="Communication" colspan="3" id="communication"/>
+    <group colspan="3" col="4" id="address_group">
+        <label name="street"/>
+        <field name="street"/>
+        <label name="street2"/>
+        <field name="street2"/>
+        <label name="zip"/>
+        <field name="zip"/>
+        <label name="city"/>
+        <field name="city"/>
+        <label name="country"/>
+        <field name="country"/>
+        <label name="state"/>
+        <field name="state"/>
+    </group>
+    <group colspan="3" col="2" id="communication_group">
+        <label name="phone"/>
+        <field name="phone"/>
+        <label name="fax"/>
+        <field name="fax"/>
+        <label name="email"/>
+        <field name="email"/>
+    </group>
+</form>

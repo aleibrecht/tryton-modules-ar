@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<tryton>
+    <data>
+        <!--Import Orders Wizard-->
+        <record model="ir.action.wizard" id="wizard_import_data">
+            <field name="name">Import Data</field>
+            <field name="wiz_name">sale.channel.import_data</field>
+            <field name="model">sale.channel</field>
+        </record>
+        <record model="ir.action.keyword" id="wizard_import_data_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">sale.channel,-1</field>
+            <field name="action" ref="wizard_import_data"/>
+        </record>
+        <record model="ir.ui.view" id="import_data_start_view_form">
+            <field name="model">sale.channel.import_data.start</field>
+            <field name="type">form</field>
+            <field name="name">wizard_import_data_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="import_data_success_view_form">
+            <field name="model">sale.channel.import_data.success</field>
+            <field name="type">form</field>
+            <field name="name">wizard_import_data_success_form</field>
+        </record>
+        <record model="ir.ui.view" id="import_data_properties_view_form">
+            <field name="model">sale.channel.import_data.properties</field>
+            <field name="type">form</field>
+            <field name="name">wizard_import_data_properties_form</field>
+        </record>
+
+        <!--Import Order states wizard-->
+        <record model="ir.action.wizard" id="wizard_import_order_states">
+            <field name="name">Import Order States</field>
+            <field name="wiz_name">sale.channel.import_order_states</field>
+            <field name="model">sale.channel</field>
+        </record>
+
+        <record model="ir.ui.view" id="wizard_import_order_states_start_view_form">
+            <field name="model">sale.channel.import_order_states.start</field>
+            <field name="type">form</field>
+            <field name="name">wizard_import_order_states_start_form</field>
+        </record>
+         <!--Export Prices Wizard-->
+        <record model="ir.action.wizard" id="wizard_export_prices">
+            <field name="name">Export Prices</field>
+            <field name="wiz_name">sale.channel.export_prices</field>
+            <field name="model">sale.channel</field>
+        </record>
+        <record model="ir.action.keyword" id="wizard_export_prices_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">sale.channel,-1</field>
+            <field name="action" ref="wizard_export_prices"/>
+        </record>
+        <record model="ir.ui.view" id="export_prices_start_view_form">
+            <field name="model">sale.channel.export_prices.start</field>
+            <field name="type">form</field>
+            <field name="name">wizard_export_prices_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="export_prices_status_view_form">
+            <field name="model">sale.channel.export_prices.status</field>
+            <field name="type">form</field>
+            <field name="name">wizard_export_prices_status_form</field>
+        </record>
+    </data>
+</tryton>

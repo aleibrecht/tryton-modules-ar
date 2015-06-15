@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<form string="Export Product Prices" col="3">
+    <image name="tryton-dialog-information" xexpand="0" xfill="0"/>
+    <label string="Product prices has been exported succesfully."
+        id="message" yalign="0.0" xalign="0.0" xexpand="1"/>
+    <field name="products_count"/>
+</form>

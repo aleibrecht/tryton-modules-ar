@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath
+        expr="/form/notebook/page[@id=&quot;preferences&quot;]/field[@name=&quot;language&quot;]"
+        position="after">
+        <label name="current_channel"/>
+        <field name="current_channel" widget="selection"/>
+    </xpath>
+</data>

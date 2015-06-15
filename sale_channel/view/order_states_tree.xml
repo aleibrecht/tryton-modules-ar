@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Order States">
+    <field name="name"/>
+    <field name="code"/>
+    <field name="action"/>
+    <field name="invoice_method"/>
+    <field name="shipment_method"/>
+    <field name="channel"/>
+</tree>

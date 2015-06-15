@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form string="Import Data" col="4">
+    <field name="message" colspan="4"/>
+    <label name="import_orders"/>
+    <field name="import_orders"/>
+    <label name="import_products"/>
+    <field name="import_products"/>
+</form>

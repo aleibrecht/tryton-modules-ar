@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<tree string="Sale Channel">
+    <field name="name"/>
+    <field name="code"/>
+    <field name="active" tree_invisible="1"/>
+    <field name="company"/>
+    <field name="address"/>
+    <field name="source"/>
+    <field name="warehouse"/>    
+    <field name="price_list"/>   
+    <field name="payment_term"/>
+</tree>

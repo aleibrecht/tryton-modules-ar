@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Channel Exception" col="6">
+    <label name="origin"/>
+    <field name="origin"/>
+    <label name="channel"/>
+    <field name="channel"/>
+    <label name="is_resolved"/>
+    <field name="is_resolved"/>
+    <label name="log"/>
+    <field name="log" colspan="5"/>
+</form>

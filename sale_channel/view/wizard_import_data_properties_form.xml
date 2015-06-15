@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form string="Configure Accounts" col="4">
+    <label name="account_expense"/>
+    <field name="account_expense"/>
+    <label name="account_revenue"/>
+    <field name="account_revenue"/>
+</form>

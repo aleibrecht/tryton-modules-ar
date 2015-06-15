@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<form string="Product Channel Listing">
+    <label name="channel"/>
+    <field name="channel"/>
+    <label name="product_identifier"/>
+    <field name="product_identifier"/>
+    <label name="product"/>
+    <field name="product"/>
+</form>

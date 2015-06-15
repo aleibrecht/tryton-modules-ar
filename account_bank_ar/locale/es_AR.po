@@ -1,0 +1,211 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.bank,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:account.bank,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:account.bank,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:account.bank,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:account.bank,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:account.bank,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:account.bank,email:"
+msgid "E-Mail"
+msgstr "Correo electrónico"
+
+msgctxt "field:account.bank,fax:"
+msgid "Fax"
+msgstr "Fax"
+
+msgctxt "field:account.bank,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account.bank,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:account.bank,phone:"
+msgid "Phone"
+msgstr "Teléfono"
+
+msgctxt "field:account.bank,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:account.bank,state:"
+msgid "State"
+msgstr "Provincia"
+
+msgctxt "field:account.bank,street2:"
+msgid "Street2"
+msgstr "Calle 2"
+
+msgctxt "field:account.bank,street:"
+msgid "Street"
+msgstr "Calle"
+
+msgctxt "field:account.bank,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:account.bank,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:account.bank,zip:"
+msgid "Zip"
+msgstr "Código Postal"
+
+msgctxt "field:account.party.bank,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:account.party.bank,bank:"
+msgid "Bank"
+msgstr "Banco"
+
+msgctxt "field:account.party.bank,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:account.party.bank,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:account.party.bank,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:account.party.bank,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:account.party.bank,email:"
+msgid "E-Mail"
+msgstr "Correo electrónico"
+
+msgctxt "field:account.party.bank,fax:"
+msgid "Fax"
+msgstr "Fax"
+
+msgctxt "field:account.party.bank,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:account.party.bank,journal:"
+msgid "Account Journal"
+msgstr "Diario contable"
+
+msgctxt "field:account.party.bank,name:"
+msgid "Account Number"
+msgstr "Cuenta N°"
+
+msgctxt "field:account.party.bank,party:"
+msgid "Party"
+msgstr "Entidad"
+
+msgctxt "field:account.party.bank,phone:"
+msgid "Phone"
+msgstr "Teléfono"
+
+msgctxt "field:account.party.bank,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:account.party.bank,state:"
+msgid "State"
+msgstr "Provincia"
+
+msgctxt "field:account.party.bank,street2:"
+msgid "Street2"
+msgstr "Calle 2"
+
+msgctxt "field:account.party.bank,street:"
+msgid "Street"
+msgstr "Calle"
+
+msgctxt "field:account.party.bank,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:account.party.bank,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:account.party.bank,zip:"
+msgid "Zip"
+msgstr "Código Postal"
+
+msgctxt "field:party.party,bank_accounts:"
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+msgctxt "field:party.party,bank_accounts_ar:"
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+msgctxt "model:account.bank,name:"
+msgid "Account Bank"
+msgstr "Contabilidad Banco"
+
+msgctxt "model:account.party.bank,name:"
+msgid "Account Party Bank"
+msgstr "Cuenta Bancaria de Entidades"
+
+msgctxt "model:ir.action,name:act_bank_form"
+msgid "Banks"
+msgstr "Bancos"
+
+msgctxt "model:ir.ui.menu,name:menu_bank_form"
+msgid "Banks"
+msgstr "Bancos"
+
+msgctxt "view:account.bank:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "view:account.bank:"
+msgid "Bank"
+msgstr "Banco"
+
+msgctxt "view:account.bank:"
+msgid "Banks"
+msgstr "Bancos"
+
+msgctxt "view:account.bank:"
+msgid "Communication"
+msgstr "Medios de contacto"
+
+msgctxt "view:account.party.bank:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "view:account.party.bank:"
+msgid "Bank Account"
+msgstr "Cuenta Bancaria"
+
+msgctxt "view:account.party.bank:"
+msgid "Bank Accounts"
+msgstr "Cuentas Bancarias"
+
+msgctxt "view:account.party.bank:"
+msgid "Communication"
+msgstr "Medios de contacto"
